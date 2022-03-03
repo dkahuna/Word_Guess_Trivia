@@ -25,15 +25,36 @@ let guessLeft = 7;
 
 // Functions created for the game
 function startGame() {
-    // Resets game
+    // For start and/or resetting of the game
     let guessLeft = 7;
 
     // this should randomize the object of the game
 randomLegend = legends[Math.floor(Math.random() * legends.length)];
+
+// Splitting the random legend into individual letters to the variable
+letterBlanks = randomLegend.split(""); 
+
+// Assigning the amount of blanks from the random legend chosen
+numBlanks = letterBlanks.length;
+
+// Testing for random character
 console.log(randomLegend); 
 
-// Splitting the random legend into individual letters to the variable on line 8
-letterBlanks = randomLegend.split(""); 
+blanksAndSuccesses = [];
+
+// Pushing the set of "blanks" for the game
+for (var i = 0; i < numBlanks; i++) {
+    blanksAndSuccesses.push("_");
 }
 
+console.log(blanksAndSuccesses);
+
+// Prints the amount of blanks from the random character chosen
+document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
+};
+
+
+
+
+// Initalizing the GAME
 startGame();
