@@ -1,18 +1,30 @@
-// these are the words used for the game
+// these are the characters used for the game
 const legends = ["Bangalore", "Lifeline", "Bloodhound", "Valkyrie", "Caustic", "Wraith", "Pathfinder", "Fuse", "Crypto", "Gibraltar", "Horizon", "Octane", "Mirage", "Loba", "Rampart", "Revenant", "Seer", "Wattson", "Mad Maggie"];
 
-let randomLegend = legends[Math.floor(Math.random() * legends.length)];
-// this should randomize the object of the game
-console.log(randomLegend); 
-
 // storing the random Legend for the game
-let name = null;
+let randomLegend = "";
+
+// Storing the letters of the chosen character into an array
+let letterBlanks = [];
 
 // game progession
-let wins = 0;
-let losses = 0;
+let winCounter = 0;
+let lossCounter = 0;
 let guessLeft = 7;
 
 // letters guessed
 var letters = [];
 
+
+// Functions created for the game
+function startGame() {
+    // Resets game
+    let guessLeft = 7;
+
+    // this should randomize the object of the game
+randomLegend = legends[Math.floor(Math.random() * legends.length)];
+console.log(randomLegend); 
+
+}
+
+startGame();
