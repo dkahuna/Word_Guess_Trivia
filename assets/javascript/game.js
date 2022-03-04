@@ -40,6 +40,7 @@ numBlanks = letterBlanks.length;
 // Testing for random character
 console.log(randomLegend); 
 
+// An array to setup for the blanks from the random characther to show on the page
 blanksAndSuccesses = [];
 
 // Pushing the set of "blanks" for the game
@@ -51,6 +52,9 @@ console.log(blanksAndSuccesses);
 
 // Prints the amount of blanks from the random character chosen
 document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
+
+
+
 };
 
 
