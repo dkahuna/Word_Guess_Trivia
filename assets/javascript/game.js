@@ -1,5 +1,5 @@
 // these are the characters used for the game
-const legends = ["Bangalore", "Lifeline", "Bloodhound", "Valkyrie", "Caustic", "Wraith", "Pathfinder", "Fuse", "Crypto", "Gibraltar", "Horizon", "Octane", "Mirage", "Loba", "Rampart", "Revenant", "Seer", "Wattson", "Mad Maggie"];
+const legends = ["Bangalore", "Lifeline", "Bloodhound", "Valkyrie", "Caustic", "Wraith", "Pathfinder", "Fuse", "Crypto", "Gibraltar", "Horizon", "Octane", "Mirage", "Loba", "Rampart", "Revenant", "Seer", "Wattson", "Mad Maggie", "New Castle"];
 
 // storing the random Legend for the game
 let randomLegend = "";
@@ -41,17 +41,17 @@ numBlanks = letterBlanks.length;
 console.log(randomLegend); 
 
 // An array to setup for the blanks from the random characther to show on the page
-blanksAndSuccesses = [];
+legendBlanks = [];
 
 // Pushing the set of "blanks" for the game
 for (var i = 0; i < numBlanks; i++) {
-    blanksAndSuccesses.push("_");
+    legendBlanks.push("_");
 }
 
-console.log(blanksAndSuccesses);
+console.log(legendBlanks);
 
 // Prints the amount of blanks from the random character chosen
-document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
+document.getElementById("blanks").innerHTML = legendBlanks.join(" ");
 
 
 
