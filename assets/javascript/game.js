@@ -22,7 +22,7 @@ let blanksAndSuccesses = [];
 var letters = [];
 
 
-// =====================================
+// =============Basis of the Game========================
 
 // randomly chooses from the array to make blanks/object of game
 randomLegend = legends[Math.floor(Math.random() * legends.length)];
@@ -62,17 +62,18 @@ let currGuesses = function() {
     document.querySelector("#usedGuess").innerHTML = letters.join(", ");
 };
 
-
-// ==========================================
-
-// // Initalizing the GAME
-// startGame();
+// ==============Events============================
 
 // User presses key(letter guess) function is called....
 document.onkeyup = function(event) {
     
     // reducing the amount of guesses per User's attempt to solve game
     guessLeft--;
+    // when the "chances" reach zero, end of game
+    if (guessLeft === 0) {
+        lossCounter++;
+        document.querySelector("#losses").innerHTML = lossCounter;
+    };
 
     // capturing what the user has guessed
     let chosenLetters = event.key.toLowerCase();
@@ -80,7 +81,10 @@ document.onkeyup = function(event) {
     // showing what the User has guessed thus far
     letters.push(chosenLetters);
 
-
+    // invoking the functions within the event will update the game for the letters guessed and how many chances are left
     currGuesses();
-    
-}
+    remainGuesses();
+
+
+    // checking if "guess" matches string of game
+};
