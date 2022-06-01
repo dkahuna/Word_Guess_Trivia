@@ -4,9 +4,10 @@ let legends = ["bangalore", "lifeline", "bloodhound", "valkyrie", "caustic", "wr
 // randomly chooses from the array to make blanks/object of game
 let randomLegend = legends[Math.floor(Math.random()*legends.length)];
 
-// Storing of the chosen character
-let answer = randomLegend;
+// Storing of the chosen character and splitting it
+let answer = randomLegend.split("");
 
+// splitting of answer
 console.log(answer);
 
 
