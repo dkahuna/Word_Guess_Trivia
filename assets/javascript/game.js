@@ -16,3 +16,9 @@ for (i = 0; i < answer.length; i++) {
 };
 console.log(blankLength);
 
+// Printing the "blanks" into the DOM
+let legendBlanks = function() {
+    document.getElementById("blanks").innerHTML = blankLength;
+};
+
+legendBlanks();
