@@ -18,7 +18,7 @@ console.log(blankLength);
 
 // Printing the "blanks" into the DOM
 let legendBlanks = function() {
-    document.getElementById("blanks").innerHTML = blankLength;
+    document.getElementById("blanks").innerHTML = blankLength.join(" ");
 };
 
 legendBlanks();
