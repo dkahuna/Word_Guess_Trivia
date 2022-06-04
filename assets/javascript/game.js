@@ -1,3 +1,5 @@
+/* ======== VARIABLES ====== */
+
 // these are the characters used for the game
 let legends = ["bangalore", "lifeline", "bloodhound", "valkyrie", "caustic", "wraith", "pathfinder", "fuse", "crypto", "gibraltar", "horizon", "octane", "mirage", "loba", "rampart", "revenant", "seer", "wattson", "mad maggie", "new castle"];
 
@@ -5,6 +7,9 @@ let legends = ["bangalore", "lifeline", "bloodhound", "valkyrie", "caustic", "wr
 let randomLegend = legends[Math.floor(Math.random()*legends.length)];
 
 let blankLength = [];
+
+// set amount of user guesses
+let attempts = 7;
 
 // Storing of the chosen character and splitting it
 let answer = randomLegend.split("");
@@ -22,3 +27,6 @@ let legendBlanks = function() {
 };
 
 legendBlanks();
+
+// printing the amount of guesses for the user
+document.getElementById("guess").innerHTML = attempts;
