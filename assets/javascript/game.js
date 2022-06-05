@@ -11,6 +11,9 @@ let blankLength = [];
 // set amount of user guesses
 let attempts = 7;
 
+// an array for the wrong letters from User
+let wrong = [];
+
 // Storing of the chosen character and splitting it
 let answer = randomLegend.split("");
 console.log(answer);
@@ -30,3 +33,5 @@ legendBlanks();
 
 // printing the amount of guesses for the user
 document.getElementById("guess").innerHTML = attempts;
+
+// Reducing the amount of guesses for wrong
